@@ -18,6 +18,12 @@ body{
     overflow:hidden;
 }
 
+.innerWindow-menu{
+    width: calc( 100% + 5px);
+    height:calc( 100% - 26px);
+    overflow:hidden;
+}
+
 .start-container{
     background:linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #333 100%) center/cover no-repeat;
     width:100%;
@@ -87,3 +93,92 @@ body{
     box-shadow: rgb(0 0 0 / 20%) 0px 0px 1px 1px inset, rgb(0 0 0 / 70%) 1px 0px 1px inset;
 }
 
+.menu-drop-down{
+    height: 23px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1px 0px 1px 2px;
+    border-left: 0px;
+    flex: 1 1 0%;
+ 
+}
+
+.menu-drop-down-label{
+    padding: 0px 7px
+}
+
+.menu-drop-down-item{
+    display: inline-flex;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-drop-down-item:hover{
+    background: #1660E8;
+    color:white;
+}
+
+.menu-drop-down-option{
+    left: 4px;
+    top: 50px;
+    right: initial;
+    bottom: initial;
+    position: absolute;
+    margin-left:-2px;
+    display: flex;
+    cursor:pointer ;
+    font-size: 11px;
+    border-bottom: 1px solid transparent;
+}
+
+.menu-drop-down-container{
+    z-index: 1;
+    padding: 2px;
+    line-height: 18px;
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    box-shadow: rgb(100 100 100) 2px 2px 1px;
+    border: 1px solid gray;
+    grid-template-columns: 16px auto auto 15px 0px;
+}
+
+.menu-drop-down-row{
+    position: relative;
+    display: contents;
+}
+
+.menu-drop-down-row:hover{
+    background-color: #1660E8;
+    color:rgb(134, 134, 134);
+}
+
+.menu-drop-down-arrow{
+    grid-column: 4 / auto;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-drop-down-hotkey{
+    display:inline;
+    white-space: nowrap;
+    grid-column: 3 / auto;
+    padding-right: 2px;
+}
+
+.menu-drop-down-image{
+    grid-column: 1 / auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.menu-drop-down-text{
+    white-space: nowrap;
+    padding-right: 8px;
+    grid-column: 2 / auto;
+}
